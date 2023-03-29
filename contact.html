@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" ></link>
+
+
+    <!-- i was not able to get an API key due to nigeria being restricted from online services -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+      async
+    ></script>
+    <script>
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 37.7749, lng: -122.4194 },
+          zoom: 16,
+        });
+        const marker = new google.maps.Marker({
+          position: { lat: 37.7749, lng: -122.4194 },
+          map,
+          title: "Our Company",
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+    <p>Address: 19 PRINCE DAPO AKANDE Street, Ajah Lagos , Nigeria</p>
+    <p>
+      Email:
+      <a href="mailto:info@ourcompany.com">aptech@gmail.com</a>
+    </p>
+  </body>
+</html>
